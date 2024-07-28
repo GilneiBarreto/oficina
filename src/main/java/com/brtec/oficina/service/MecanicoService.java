@@ -25,4 +25,9 @@ public class MecanicoService {
     public Optional<Mecanico> findById(Long id){
         return mecanicoRepository.findById(id);
     }
+
+    public Mecanico create(Mecanico mecanico){
+        mecanicoRepository.save(mecanico);
+        return mecanico;
+    }
 }
